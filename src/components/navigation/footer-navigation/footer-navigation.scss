@@ -1,0 +1,23 @@
+@import "../../../scss/_variables.scss";
+@import "../../../scss/_mixins.scss";
+
+.footer-navigation {
+  max-width: 144px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.footer-navigation__item {
+  margin-bottom: 9px;
+
+  &--current {
+    display: none;
+  }
+}
+
+.footer-navigation__link {
+  @include footer-main-font;
+  @include hover-active;
+}

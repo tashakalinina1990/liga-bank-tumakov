@@ -1,0 +1,25 @@
+@import "../../../scss/_variables.scss";
+@import "../../../scss/_mixins.scss";
+
+.main-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 650px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-navigation__item {
+  margin-right: 25px;
+  padding: 5px 0;
+}
+
+.main-navigation__link {
+  @include header-font;
+  @include hover-active;
+
+  &--current {
+    color: $primary-color;
+  }
+}

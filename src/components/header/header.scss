@@ -1,0 +1,23 @@
+@import "../../scss/variables.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  min-height: 91px;
+  padding: 25px 0;
+
+  background-color: $bg-color;
+}
+
+.header__wrap {
+  display: flex;
+  align-items: baseline;
+}
+
+.header__logo {
+  margin-right: 58px;
+}
+
+.header__user-menu {
+  margin-left: auto;
+}

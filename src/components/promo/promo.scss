@@ -1,0 +1,114 @@
+@import "../../scss/_variables.scss";
+@import "../../scss/_mixins.scss";
+
+.promo {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  min-height: 400px;
+
+  background: linear-gradient(180deg, $primary-color 50%, $bg-promo-color-2);
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 497px;
+    height: 100%;
+
+    background-color: #000000;
+  }
+}
+
+.promo__wrap {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 917px;
+  margin-left: -148px;
+  padding: 50px;
+  padding-right: 400px;
+  padding-left: 118px;
+
+  background: linear-gradient(180deg, $primary-color 50%, $bg-promo-color-1);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+
+    width: 335px;
+    height: 228px;
+
+    background-repeat: no-repeat;
+    background-size: 335px 228px;
+  }
+
+  &::before {
+    top: 57px;
+    right: -75px;
+
+    background-image: url("../../assets/img/white-card@1x.png");
+  }
+
+  &::after {
+    top: 115px;
+    right: 34px;
+
+    background-image: url("../../assets/img/black-card@1x.png");
+  }
+}
+
+.promo__title {
+  @include font;
+
+  margin: 0;
+  margin-top: 65px;
+  margin-bottom: 25px;
+
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 63px;
+  color: $font-color-light;
+}
+
+.promo__description {
+  @include font;
+
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: $font-color-semi-light;
+}
+
+.promo__link {
+  @include button;
+
+  min-width: 234px;
+  max-width: 300px;
+  min-height: 53px;
+  margin-top: 40px;
+
+  font-size: 18px;
+  line-height: 21px;
+  color: $font-color;
+
+  background-color: $bg-color;
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .promo__wrap {
+    &::before {
+      background-image: url("../../assets/img/white-card@2x.png");
+    }
+
+    &::after {
+      background-image: url("../../assets/img/black-card@2x.png");
+    }
+  }
+}

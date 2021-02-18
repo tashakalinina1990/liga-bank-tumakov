@@ -1,0 +1,9 @@
+@import "../../scss/_mixins.scss";
+
+.logo {
+  @include hover-active;
+}
+
+.logo__image {
+  margin-right: 9px;
+}

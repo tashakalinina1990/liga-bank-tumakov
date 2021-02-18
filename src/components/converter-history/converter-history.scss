@@ -1,0 +1,108 @@
+@import "../../scss/_variables.scss";
+@import "../../scss/_mixins.scss";
+
+.converter-history {
+  margin-top: 100px;
+  padding: 40px 70px;
+
+  background-color: $bg-color;
+}
+
+.converter-history__title {
+  @include section-title-font;
+
+  display: block;
+  margin-top: 4px;
+  margin-bottom: 49px;
+}
+
+.converter-history__list {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  max-height: 255px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+
+    width: 1px;
+    height: calc(100% + 34px);
+
+    background-color: #c1c2ca;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.converter-history__list--noline::before {
+  display: none;
+}
+
+.converter-history__item {
+  @include page-content-font;
+
+  display: flex;
+  max-width: 485px;
+  margin-bottom: 28px;
+}
+
+.converter-history__date {
+  margin: 0;
+  margin-right: 40px;
+}
+
+.converter-history__money-source {
+  position: relative;
+
+  display: flex;
+  margin: 0;
+  margin-right: 13px;
+  padding-right: 54px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    width: 41px;
+    height: 18px;
+    margin-top: -9px;
+
+    background-image: url("../../assets/img/arrow.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.converter-history__money-converted {
+  display: flex;
+  margin: 0;
+}
+
+.converter-history__amount {
+  display: block;
+  max-width: 110px;
+  margin-right: 6px;
+  overflow: hidden;
+}
+
+.converter-history__clear-button {
+  @include button;
+
+  width: 198px;
+  min-height: 51px;
+  margin-top: 20px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}

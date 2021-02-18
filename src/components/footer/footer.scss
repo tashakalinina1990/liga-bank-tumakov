@@ -1,0 +1,38 @@
+@import "../../scss/_variables.scss";
+@import "../../scss/_mixins.scss";
+
+.footer {
+  padding: 40px 0;
+
+  background-color: $bg-color;
+}
+
+.footer__wrap {
+  display: flex;
+}
+
+.footer__copyright {
+  width: 252px;
+  margin-top: 9px;
+  margin-right: 81px;
+}
+
+.footer__copyright-description {
+  @include footer-description-font;
+
+  margin-top: 16px;
+}
+
+.footer__navigation {
+  margin-top: 15px;
+  margin-right: 80px;
+}
+
+.footer__contacts {
+  margin-top: 21px;
+}
+
+.footer__social {
+  margin-top: 21px;
+  margin-left: auto;
+}

@@ -1,0 +1,41 @@
+@import "../../scss/_variables.scss";
+@import "../../scss/_mixins.scss";
+
+.user-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 280px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.user-menu__item {
+  margin-left: 25px;
+  padding: 5px 0;
+}
+
+.user-menu__link {
+  @include header-font;
+  @include hover-active;
+
+  position: relative;
+
+  &--login {
+    padding-left: 30px;
+  }
+
+  &--login::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+
+    width: 20px;
+    height: 22px;
+
+    background-image: url("../../assets/img/login.svg");
+    background-repeat: no-repeat;
+  }
+}

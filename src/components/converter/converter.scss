@@ -1,0 +1,118 @@
+@import "../../scss/_variables.scss";
+@import "../../scss/_mixins.scss";
+
+.converter {
+  padding-top: 12px;
+  padding-bottom: 110px;
+}
+
+.converter__title {
+  @include page-title-font;
+}
+
+.converter__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.converter__inputs-wrap {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 85px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 56px;
+    height: 36px;
+    margin-top: 2px;
+    margin-left: -28px;
+
+    background-image: url("../../assets/img/change.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.converter__inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 525px;
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+}
+
+.converter__label {
+  @include form-label-font;
+
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.converter__input {
+  @include form-input-font;
+
+  width: 390px;
+  min-height: 60px;
+
+  text-align: center;
+  text-align-last: center;
+
+  border: 1px solid $border-form;
+  border-radius: 4px;
+
+  &--date {
+    padding-right: 60px;
+
+    font-weight: 400;
+
+    background-image: url("../../assets/img/calendar.svg");
+    background-repeat: no-repeat;
+    background-position: 331px center;
+  }
+
+  &--currency {
+    width: 120px;
+    padding-left: 18px;
+
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 42px;
+    text-align: left;
+    text-align-last: left;
+
+    background-image: url("../../assets/img/select.svg");
+    background-repeat: no-repeat;
+    background-position: 87px center;
+    background-size: 16px 8px;
+
+    appearance: none;
+  }
+}
+
+.converter__date {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+}
+
+.converter__submit {
+  @include button;
+
+  width: 382px;
+  min-height: 60px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+}
